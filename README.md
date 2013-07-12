@@ -8,6 +8,6 @@ This project represents a concept dashboard driving.
 Dependencies
 =========
 
-Qt5
+Qt5: http://releases.qt-project.org/qt5/
 
-Ubuntu-Qt components
+Ubuntu-Qt components: https://code.launchpad.net/~ubuntu-sdk-team/ubuntu-ui-toolkit/trunk
