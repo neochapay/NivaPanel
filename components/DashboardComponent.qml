@@ -7,6 +7,7 @@ Item {
     id: dashboard
 
     Button{
+        // FIXME
         id: runEngine
         text: "Run"
         color: UbuntuColors.orange
