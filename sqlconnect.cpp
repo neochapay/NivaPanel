@@ -12,7 +12,15 @@ SqlConnect::SqlConnect(QObject *parent) :
     {
          qDebug() << sdb.lastError().text();
     }
-    //setServiceMode(true);
+    QString s_mode = SqlConnect::getConfigValue("SERVICE MODE");
+    if(s_mode == "TRUE")
+    {
+        setServiceMode(true);
+    }
+    else
+    {
+        setServiceMode(false);
+    }
 }
 
 bool SqlConnect::isServiceMode() const
@@ -34,4 +42,18 @@ void SqlConnect::setServiceMode(const bool &value)
     check.exec(qstr);
 
     serviceMode = value;
+}
+
+QString SqlConnect::getConfigValue(const QString value)
+{
+    QSqlQuery a_query;
+    QString sql = "SELECT value FROM config WHERE name = '%1'";
+    sql = sql.arg(value);
+    a_query.exec(sql);
+
+    QSqlRecord rec = a_query.record();
+    a_query.next();
+    QString answer = a_query.value(rec.indexOf("value")).toString();
+
+    return answer;
 }

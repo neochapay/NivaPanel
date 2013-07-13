@@ -16,6 +16,11 @@ Template{
                 onCheckedChanged: if(serviceCheckBox.checked)
                                   {
                                       serviceDialog.show()
+                                      sconf.serviceMode = true;
+                                  }
+                                  else
+                                  {
+                                      sconf.serviceMode = false;
                                   }
                 checked: sconf.serviceMode;
             }
