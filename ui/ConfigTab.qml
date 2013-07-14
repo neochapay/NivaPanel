@@ -12,10 +12,9 @@ Tab {
             width: 180;
             height: tabs.height
             ConfigComponent{}
-
         }
 
-        Page{
+        Column{
             id: viewColumn
             property alias source: contenLoader.source
             anchors.right:parent.left
@@ -24,7 +23,7 @@ Tab {
             anchors.leftMargin: 190
             anchors.top: parent.top
             width: parent.width
-            height: parent.height
+            height: tabs.height
 
             Label{
                 id: colimtLabel
@@ -32,6 +31,7 @@ Tab {
             }
             Loader{
                 id: contenLoader
+                height: tabs.height
                 objectName: "ContentLoader"
                 source: "../components/EngineComponent.qml"
             }

@@ -10,7 +10,6 @@ Template{
             titleWidth: 500
             CheckBox{
                 id: woutKeyCheckBox
-
             }
         }
     }

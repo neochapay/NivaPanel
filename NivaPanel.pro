@@ -34,3 +34,4 @@ OTHER_FILES += \
     components/ConfigComponent.qml \
     components/ServiceComponent.qml \
     components/EngineComponent.qml
+

@@ -33,16 +33,4 @@ MainView {
             id: configTab
         }
      }
-
-    Button {
-        objectName: "button"
-        width: parent.width
-        color: UbuntuColors.coolGrey
-
-        text: i18n.tr("Quit Dashboard")
-                
-        onClicked: {
-            Qt.quit();
-         }
-    }
 }

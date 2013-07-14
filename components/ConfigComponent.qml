@@ -7,29 +7,29 @@ MainView {
         id: contactModel
 
         ListElement {
-            name: i18n.tr("Engine")
+            name: "Engine"
             source: "EngineComponent.qml"
         }
         ListElement {
-            name: i18n.tr("Light")
+            name: "Light"
         }
         ListElement {
-            name: i18n.tr("Climat Control")
+            name: "Climat Control"
         }
         ListElement {
-            name: i18n.tr("Doors and Windows")
+            name: "Doors and Windows"
         }
         ListElement {
-            name: i18n.tr("Network")
+            name: "Network"
         }
         ListElement {
-            name: i18n.tr("MultiMedia")
+            name: "MultiMedia"
         }
         ListElement {
-            name: i18n.tr("Navigation")
+            name: "Navigation"
         }
         ListElement {
-            name: i18n.tr("Service")
+            name: "Service"
             source: "ServiceComponent.qml"
         }
     }

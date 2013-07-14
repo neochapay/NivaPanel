@@ -3,7 +3,6 @@ import Ubuntu.Components 0.1
 import Ubuntu.Components.Popups 0.1
 import "../ui"
 Template{
-
     TemplateSection{
         title: i18n.tr("Service Mode");
         description: i18n.tr("Service mode allows you to get access to low-level settings of the car. It can bring attention to the output of the car down!")
