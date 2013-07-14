@@ -30,13 +30,14 @@ bool SqlConnect::isServiceMode() const
 
 void SqlConnect::setServiceMode(const bool &value)
 {
+    QString qstr;
     if(value)
     {
-        QString qstr = "UPDATE config SET `value` = 'TRUE' WHERE `name` = 'SERVICE MODE'";
+        qstr = "UPDATE config SET `value` = 'TRUE' WHERE `name` = 'SERVICE MODE'";
     }
     else
     {
-        QString qstr = "UPDATE config SET `value` = 'FALSE' WHERE `name` = 'SERVICE MODE'";
+        qstr = "UPDATE config SET `value` = 'FALSE' WHERE `name` = 'SERVICE MODE'";
     }
     QSqlQuery check;
     check.exec(qstr);
