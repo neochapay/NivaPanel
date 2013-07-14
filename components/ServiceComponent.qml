@@ -16,7 +16,6 @@ Template{
                 onCheckedChanged: if(serviceCheckBox.checked)
                                   {
                                       serviceDialog.show()
-                                      sconf.serviceMode = true;
                                   }
                                   else
                                   {
@@ -36,7 +35,8 @@ Template{
             color: UbuntuColors.orange
             onClicked: {
                 PopupUtils.close(serviceDialog)
-                serviceCheckBox.state = "uncheck"
+                sconf.serviceMode = false
+                serviceCheckBox.checked = false
             }
         }
 
@@ -44,7 +44,11 @@ Template{
             id: serviceDialogYes
             text: "Yes"
             color: UbuntuColors.warmGrey
-            onClicked: PopupUtils.close(serviceDialog)
+            onClicked: {
+                PopupUtils.close(serviceDialog)
+                sconf.serviceMode = true
+                serviceCheckBox.checked = true
+            }
         }
     }
 
