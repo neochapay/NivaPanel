@@ -53,5 +53,17 @@ Template{
                 maximumValue: 7000
             }
         }
+
+        TemplateRow{
+            title: "Idling RPM"
+            titleWidth: 150
+
+            Slider{
+                id: iRpmSlider
+                width: 400
+                minimumValue: 100
+                maximumValue: 1500
+            }
+        }
     }
 }

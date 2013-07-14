@@ -33,6 +33,7 @@ Tab {
             Loader{
                 id: contenLoader
                 objectName: "ContentLoader"
+                source: "../components/EngineComponent.qml"
             }
         }
     }
