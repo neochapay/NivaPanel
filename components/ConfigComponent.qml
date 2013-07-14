@@ -8,6 +8,7 @@ Item {
 
         ListElement {
             name: "Engine"
+            source: "EngineComponent.qml"
         }
         ListElement {
             name: "Light"

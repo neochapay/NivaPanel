@@ -32,4 +32,5 @@ HEADERS += \
 OTHER_FILES += \
     ui/ConfigTab.qml \
     components/ConfigComponent.qml \
-    components/ServiceComponent.qml
+    components/ServiceComponent.qml \
+    components/EngineComponent.qml
