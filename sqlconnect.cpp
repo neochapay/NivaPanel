@@ -32,11 +32,11 @@ void SqlConnect::setServiceMode(const bool &value)
 {
     if(value)
     {
-        qstr = "UPDATE config SET `value` = 'TRUE' WHERE `name` = 'SERVICE MODE'";
+        QString qstr = "UPDATE config SET `value` = 'TRUE' WHERE `name` = 'SERVICE MODE'";
     }
     else
     {
-        qstr = "UPDATE config SET `value` = 'FALSE' WHERE `name` = 'SERVICE MODE'";
+        QString qstr = "UPDATE config SET `value` = 'FALSE' WHERE `name` = 'SERVICE MODE'";
     }
     QSqlQuery check;
     check.exec(qstr);
@@ -56,4 +56,26 @@ QString SqlConnect::getConfigValue(const QString value)
     QString answer = a_query.value(rec.indexOf("value")).toString();
 
     return answer;
+}
+
+void SqlConnect::setConfigValue(const QString name, const QString value)
+{
+    QSqlQuery a_query;
+    QString sql;
+    if(SqlConnect::getConfigValue(name) == "")
+    {
+        qDebug() << "ADD NEW VALUE";
+        sql = "INSERT INTO config (`name`, `value`) VALUES ('%1', '%2')";
+        sql = sql.arg(name);
+        sql = sql.arg(value);
+        a_query.exec(sql);
+    }
+    else
+    {
+        qDebug() << "UPDATE VALUE";
+        sql = "UPDATE config SET `value` = '%2' WHERE `name` = '%1'";
+        sql = sql.arg(name);
+        sql = sql.arg(value);
+        a_query.exec(sql);
+    }
 }

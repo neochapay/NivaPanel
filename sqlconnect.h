@@ -12,6 +12,7 @@ public:
     explicit SqlConnect(QObject *parent = 0);
     bool isServiceMode() const;
     void setServiceMode(const bool &);
+    void setConfigValue(const QString, const QString);
     QString getConfigValue(const QString);
     
 signals:
