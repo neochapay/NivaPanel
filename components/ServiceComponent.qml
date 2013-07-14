@@ -5,10 +5,10 @@ import "../ui"
 Template{
 
     TemplateSection{
-        title: "Service Mode";
-        description: "Service mode allows you to get access to low-level settings of the car. It can bring attention to the output of the car down!"
+        title: i18n.tr("Service Mode");
+        description: i18n.tr("Service mode allows you to get access to low-level settings of the car. It can bring attention to the output of the car down!")
         TemplateRow{
-            title: "Enable service mode"
+            title: i18n.tr("Enable service mode")
             titleWidth: 500
 
             CheckBox{
@@ -28,10 +28,10 @@ Template{
 
     Dialog{
         id: serviceDialog
-        title: "Are you sure?"
+        title: i18n.tr("Are you sure?")
         Button{
             id: serviceDialogNo
-            text: "No"
+            text: i18n.tr("No")
             color: UbuntuColors.orange
             onClicked: {
                 PopupUtils.close(serviceDialog)
@@ -42,7 +42,7 @@ Template{
 
         Button{
             id: serviceDialogYes
-            text: "Yes"
+            text: i18n.tr("Yes")
             color: UbuntuColors.warmGrey
             onClicked: {
                 PopupUtils.close(serviceDialog)

@@ -4,9 +4,9 @@ import "../ui"
 
 Template{
     TemplateSection{
-        title: "Configure you engine"
+        title: i18n.tr("Configure you engine")
         TemplateRow{
-            title: "Allow start the engine without a key"
+            title: i18n.tr("Allow start the engine without a key")
             titleWidth: 500
             CheckBox{
                 id: woutKeyCheckBox
@@ -16,11 +16,11 @@ Template{
     }
 
     TemplateSection{
-        title: "Service mode of engine"
-        description: "Do not change these values ​​if you are not an expert. Incorrect values ​​may lead to the conclusion engine failure."
+        title: i18n.tr("Service mode of engine")
+        description: i18n.tr("Do not change these values ​​if you are not an expert. Incorrect values ​​may lead to the conclusion engine failure.")
         visible: sconf.serviceMode
         TemplateRow{
-            title: "Warning temp"
+            title: i18n.tr("Warning temp")
             titleWidth: 150
 
             Slider{
@@ -31,7 +31,7 @@ Template{
             }
         }
         TemplateRow{
-            title: "Error temp"
+            title: i18n.tr("Error temp")
             titleWidth: 150
 
             Slider{
@@ -43,7 +43,7 @@ Template{
         }
 
         TemplateRow{
-            title: "Maximum RPM"
+            title: i18n.tr("Maximum RPM")
             titleWidth: 150
 
             Slider{
@@ -55,7 +55,7 @@ Template{
         }
 
         TemplateRow{
-            title: "Idling RPM"
+            title: i18n.tr("Idling RPM")
             titleWidth: 150
 
             Slider{

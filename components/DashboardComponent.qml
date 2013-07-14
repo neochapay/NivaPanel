@@ -9,7 +9,7 @@ Item {
     Button{
         // FIXME
         id: runEngine
-        text: "Run"
+        text: i18n.tr("Run")
         color: UbuntuColors.orange
         onClicked: {
             if(runEngine.text == "Run")
@@ -17,7 +17,7 @@ Item {
                 dash.voltage = 12
                 dash.rpm = 900
                 dash.oilPressure = 45
-                runEngine.text = "Stop"
+                runEngine.text = i18n.tr("Stop")
                 dash.fuelLevel = 60
             }
             else
@@ -25,7 +25,7 @@ Item {
                 dash.voltage = 0
                 dash.rpm = 0
                 dash.oilPressure = 0
-                runEngine.text = "Run"
+                runEngine.text = i18n.tr("Run")
             }
 
             voltNeedleRotation.angle = -1*Math.min( 35, Math.max(-35, ( ((dash.voltage-8) * (70/10)) - 35 )))
