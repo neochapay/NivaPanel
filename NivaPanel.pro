@@ -15,7 +15,8 @@ QT += sql
 # The .cpp file which was generated for your project. Feel free to hack it.
 SOURCES += main.cpp \
     dashboard.cpp \
-    sqlconnect.cpp
+    sqlconnect.cpp \
+    src/model/sensor.cpp
 
 # Installation path
 # target.path =
@@ -27,7 +28,8 @@ qtcAddDeployment()
 HEADERS += \
     dashboard.h \
     config.h \
-    sqlconnect.h
+    sqlconnect.h \
+    src/model/sensor.h
 
 OTHER_FILES += \
     ui/ConfigTab.qml \
