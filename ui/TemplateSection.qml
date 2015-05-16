@@ -29,27 +29,5 @@ Column {
             width: parent.width
             wrapMode: Text.WordWrap
         }
-
-
-        states: [
-            State {
-                name: "wide text"
-                when: description.text.length > 20
-                PropertyChanges {
-                    target: description
-                    width: 500
-                    height: text_field.paintedHeight
-                }
-            },
-            State {
-                name: "not wide text"
-                when: description.text.length <= 20
-                PropertyChanges {
-                    target: description
-                    width: dummy_text.paintedWidth
-                    height: text_field.paintedHeight
-                }
-            }
-        ]
     }
 }
